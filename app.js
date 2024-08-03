@@ -48,7 +48,8 @@ app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
  *                   example: "Добро пожаловать в наше REST API!"
  */
 app.get('/', (req, res) => {
-  res.json({ message: 'Добро пожаловать в наше REST API!' });
+//  res.json({ message: 'Добро пожаловать в наше REST API!' });
+res.send('<h1>Hello Express</h1>');
 });
 
 /**
