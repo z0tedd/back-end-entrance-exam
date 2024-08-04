@@ -1,6 +1,6 @@
 const https = require("https");
 const cacheService = require("../views/CacheService");
-const API_KEY = "ap0aqmo79sih";
+const API_KEY = "YOUR-KEY";
 
 class myapiService {
   resizeCache(newSize) {
