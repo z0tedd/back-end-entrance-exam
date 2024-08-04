@@ -2,9 +2,9 @@
 
 [eBirdApi](https://documenter.getpostman.com/view/664302/S1ENwy59) - API, к которому обращаемся.
 
-Данные проект - API для получения данных с сайта ebird с кешированнием уже принятых ответов.
+Данный проект - API для получения данных с сайта ebird с кешированнием уже принятых ответов.
 
-## Возможности
+## Функции
 
 - Получение данных о птицах для указанного региона.
 - Кеширование прошлых результатов.
@@ -22,7 +22,7 @@
 
    ````sh
    git clone git@github.com:z0tedd/back-end-entrance-exam.git
-   cd back-end-entrance-exam ```
+   cd back-end-entrance-exam 
    ````
 
 2. **Установите зависимости:**
@@ -32,7 +32,10 @@
    ```
 
 3. **Установите API ключ [eBird](https://ebird.org/api/keygen):**
-   Замените <API-Key> в файле /models/myapiService.js на [ваш](https://ebird.org/api/keygen) API ключ.
+
+    Замените YOUR-KEY в файле /models/myapiService.js на [ваш](https://ebird.org/api/keygen) API ключ.
+
+
 4. **Запустите сервер:**
 
    ```sh
@@ -40,6 +43,7 @@
    ```
 
 5. **Получите доступ к документации API:**
+ 
    Документация(SwaggerUI): <http://localhost:3000/docs>
 
 # Вступительное задание для Backend специалиста
