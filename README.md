@@ -22,7 +22,7 @@
 
    ````sh
    git clone git@github.com:z0tedd/back-end-entrance-exam.git
-   cd back-end-entrance-exam ```
+   cd back-end-entrance-exam 
    ````
 
 2. **Установите зависимости:**
