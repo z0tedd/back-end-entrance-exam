@@ -5,7 +5,7 @@ const myapiController = require("../controllers/myapiController");
 /**
  * @swagger
  * tags:
- *   name: eBird
+ *   name: Birds
  *   description: Операции с данными о наблюдении птиц
  */
 
