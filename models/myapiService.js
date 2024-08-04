@@ -33,7 +33,7 @@ class myapiService {
             data += chunk;
           });
           resp.on("end", () => {
-            const ebirdData = data;
+            const ebirdData = JSON.parse(data);
             resolve(ebirdData);
           });
         })

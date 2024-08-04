@@ -18,9 +18,10 @@ const myapiController = require("../controllers/myapiController");
  *       - Birds
  *     parameters:
  *       - name: regionCode
+ *         example: KZ
  *         in: query
  *         required: true
- *         description: Код региона
+ *         description: Code of country
  *         schema:
  *           type: string
  *     responses:
@@ -29,36 +30,43 @@ const myapiController = require("../controllers/myapiController");
  *         content:
  *           application/json:
  *             schema:
- *               type: array
- *               items:
- *                  type: object
- *                  properties:
- *                    speciesCode:
- *                      type: string
- *                    comName:
- *                      type: string
- *                    sciName:
- *                      type: string
- *                    locId:
- *                      type: string
- *                    locName:
- *                      type: string
- *                    obsDt:
- *                      type: string
- *                    howMany:
- *                      type: number
- *                    lat:
- *                      type: number
- *                    lng:
- *                      type: number
- *                    obsValid:
- *                      type: boolean
- *                    obsReviewed:
- *                      type: boolean
- *                    locationPrivate:
- *                      type: boolean
- *                    subId:
- *                      type: string
+ *               type: object
+ *               properties:
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       speciesCode:
+ *                         type: string
+ *                       comName:
+ *                         type: string
+ *                       sciName:
+ *                         type: string
+ *                       locId:
+ *                         type: string
+ *                       locName:
+ *                         type: string
+ *                       obsDt:
+ *                         type: string
+ *                       howMany:
+ *                         type: number
+ *                       lat:
+ *                         type: number
+ *                       lng:
+ *                         type: number
+ *                       obsValid:
+ *                         type: boolean
+ *                       obsReviewed:
+ *                         type: boolean
+ *                       locationPrivate:
+ *                         type: boolean
+ *                       subId:
+ *                         type: string
+ *
+ *                 source:
+ *                   type: string
+ *                   example: api
  *       400:
  *         description: Parameter `regionCode` is empty or missing
  *       500:
