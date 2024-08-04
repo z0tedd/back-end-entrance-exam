@@ -3,7 +3,6 @@ const swaggerUi = require("swagger-ui-express");
 
 const options = {
   definition: {
-    //TODO: add information
     openapi: "3.0.0",
     info: {
       title: "eBird in-memory cache api",
@@ -17,7 +16,7 @@ const options = {
       },
     ],
   },
-  apis: ["./routes/*.js"],
+  apis: ["./src/routes/*.js"],
 };
 
 const specs = swaggerJsdoc(options);

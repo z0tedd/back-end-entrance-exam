@@ -3,7 +3,7 @@ const cors = require("cors");
 const swaggerUi = require("swagger-ui-express");
 const swaggerImport = require("./swagger");
 
-const myapiRoutes = require("./routes/myapiRoutes");
+const myapiRoutes = require("./src/routes/myapiRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
