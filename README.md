@@ -32,7 +32,10 @@
    ```
 
 3. **Установите API ключ [eBird](https://ebird.org/api/keygen):**
-   Замените <API-Key> в файле /models/myapiService.js на [ваш](https://ebird.org/api/keygen) API ключ.
+
+    Замените YOUR-KEY в файле /models/myapiService.js на [ваш](https://ebird.org/api/keygen) API ключ.
+
+
 4. **Запустите сервер:**
 
    ```sh
@@ -40,6 +43,7 @@
    ```
 
 5. **Получите доступ к документации API:**
+ 
    Документация(SwaggerUI): <http://localhost:3000/docs>
 
 # Вступительное задание для Backend специалиста
