@@ -30,8 +30,7 @@ const myapiController = require("../controllers/myapiController");
  *           application/json:
  *             schema:
  *               type: array
- *               properties:
- *                data:
+ *               items:
  *                  type: object
  *                  properties:
  *                    speciesCode:
@@ -61,9 +60,9 @@ const myapiController = require("../controllers/myapiController");
  *                    subId:
  *                      type: string
  *       400:
- *         description: Параметр `regionCode` отсутствует или пустой
+ *         description: Parameter `regionCode` is empty or missing
  *       500:
- *         description: Ошибка при получении информации
+ *         description: Getting data error
  */
 router.get("/", myapiController.getRecentObservations);
 
@@ -90,7 +89,7 @@ router.post("/cache/clear", myapiController.clearCache);
 
 /**
  * @swagger
- * /weather/cache/resize:
+ * /birds/cache/resize:
  *   post:
  *     summary: Resize Cache max size
  *     tags:

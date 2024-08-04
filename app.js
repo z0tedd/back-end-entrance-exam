@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 
-const swaggerUi = require('swagger-ui-express');
+const swaggerUi = require("swagger-ui-express");
 const swaggerImport = require("./swagger");
 
 const myapiRoutes = require("./routes/myapiRoutes");
@@ -8,10 +8,9 @@ const myapiRoutes = require("./routes/myapiRoutes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-
 app.use(express.json());
 swaggerImport(app);
-app.use("/myapi",myapiRoutes);
+app.use("/birds", myapiRoutes);
 
 app.listen(PORT, () => {
   console.log(`Сервер запущен на порту ${PORT}`);
@@ -44,5 +43,3 @@ app.listen(PORT, () => {
 // app.delete('/items/:id', (req, res) => {
 //   res.status(204).end();
 // });
-
-

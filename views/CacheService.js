@@ -1,7 +1,7 @@
 class CacheService {
   constructor() {
     this.cache = new Map();
-    this.size = 100; // initial cache size 
+    this.size = 100; // initial cache size
   }
 
   get(key) {
@@ -9,7 +9,7 @@ class CacheService {
   }
 
   set(key, value) {
-    if (this.size =< this.cache.size) {
+    if (this.size <= this.cache.size) {
       const firstKey = this.cache.keys().next().value; // delete first added element
       this.cache.delete(firstKey);
     }
@@ -32,9 +32,9 @@ class CacheService {
     this.size = newSize;
     if (!isNaN(newSize) || newSize <= 0) {
       return {
-        CODE: 'ERROR_VALUE',
-        message: 'size must be number bigger then 0',
-      }
+        CODE: "ERROR_VALUE",
+        message: "size must be number bigger then 0",
+      };
     }
     // Deleting first elements while cache size bigger than new cache size
     while (this.cache.size > newSize) {

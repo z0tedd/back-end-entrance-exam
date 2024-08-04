@@ -1,5 +1,5 @@
 const https = require("https");
-const cacheService = require("../views/cache");
+const cacheService = require("../views/CacheService");
 const API_KEY = "ap0aqmo79sih";
 
 class myapiService {
@@ -15,14 +15,14 @@ class myapiService {
     if (observationData) {
       return { data: observationData, source: "cache" };
     }
-    observationData = await this.fetchRecentObservations;
+    observationData = await this.fetchRecentObservations(regionCode);
     cacheService.set(regionCode, observationData);
     return { data: observationData, source: "api" };
   }
 
   fetchRecentObservations(regionCode) {
     const options = {
-      headers: { "X-eBirdApiToken": API_KEY },
+      headers: { "X-eBirdApiToken": `${API_KEY}` },
     };
     return new Promise((resolve, reject) => {
       const ebirdUrl = `https://api.ebird.org/v2/data/obs/${regionCode}/recent`;
@@ -33,7 +33,7 @@ class myapiService {
             data += chunk;
           });
           resp.on("end", () => {
-            const ebirdData = JSON.parse(data);
+            const ebirdData = data;
             resolve(ebirdData);
           });
         })
